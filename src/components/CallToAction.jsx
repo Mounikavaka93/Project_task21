@@ -13,8 +13,8 @@ export default function CallToAction() {
   return (
     <section id="join" className="scroll-mt-0 py-20 lg:scroll-mt-[-1.75rem] lg:py-28">
       <div className="section-shell">
-        <div className="flex flex-col items-start justify-between gap-8 overflow-hidden rounded-3xl border border-ember/40 bg-gradient-to-br from-raised via-panel to-void px-6 py-12 sm:px-12 lg:flex-row lg:items-center">
-          <div className="max-w-xl">
+        <div className="flex w-full flex-col items-start justify-between gap-8 overflow-hidden rounded-3xl border border-ember/40 bg-gradient-to-br from-raised via-panel to-void px-6 py-12 sm:px-8 lg:flex-row lg:items-center">
+          <div className="w-full min-w-0">
             <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">Start the journey</p>
             <h2 className="mt-3 font-display text-4xl font-extrabold uppercase leading-[0.95] sm:text-5xl lg:text-6xl">
               Ready to bulk

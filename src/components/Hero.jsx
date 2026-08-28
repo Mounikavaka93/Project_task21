@@ -18,11 +18,11 @@ export default function Hero() {
             <span className="h-1.5 w-1.5 rounded-full bg-ember" />
             12-week bulking program
           </p>
-          <h1 className="max-w-xl font-display text-5xl font-extrabold uppercase leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
+          <h1 className="w-full font-display text-5xl font-extrabold uppercase leading-[0.95] tracking-tight sm:text-6xl lg:text-7xl">
             Build mass.
             <span className="block text-ember">Train with intent.</span>
           </h1>
-          <p className="mt-6 max-w-lg text-base leading-relaxed text-mist sm:text-lg">
+          <p className="mt-6 w-full text-base leading-relaxed text-mist sm:text-lg">
             IronPeak is a complete bulking system: structured hypertrophy training, a calorie surplus you can
             actually follow, and recovery that keeps you progressing week after week.
           </p>
@@ -58,7 +58,7 @@ export default function Hero() {
           </dl>
         </div>
 
-        <div className="mx-auto w-full max-w-lg lg:mx-0 lg:max-w-none">
+        <div className="w-full">
           <div className="overflow-hidden rounded-3xl border border-line bg-panel shadow-2xl shadow-black/40">
             <img
               src="https://images.unsplash.com/photo-1581009146145-b5ef050c2e1e?auto=format&fit=crop&w=1000&q=80"
