@@ -61,6 +61,30 @@ body::-webkit-scrollbar {
   padding-inline: 1rem;
 }
 
+@media (min-width: 640px) {
+  .section-shell {
+    padding-inline: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-shell {
+    padding-inline: 2rem;
+  }
+}
+
+@media (min-width: 1536px) {
+  .section-shell {
+    padding-inline: 2.5rem;
+  }
+}
+
+img,
+svg,
+video {
+  max-width: 100%;
+}
+
 .no-scrollbar {
   scrollbar-width: none;
   -ms-overflow-style: none;

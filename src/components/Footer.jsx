@@ -11,23 +11,23 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="border-t border-line bg-panel">
-      <div className="section-shell grid grid-cols-1 items-start gap-10 py-12 sm:grid-cols-2 lg:grid-cols-3">
-        <div className="sm:col-span-2 lg:col-span-1">
+      <div className="section-shell grid grid-cols-1 items-start gap-8 py-10 sm:grid-cols-2 sm:gap-10 sm:py-12 lg:grid-cols-3">
+        <div className="min-w-0 sm:col-span-2 lg:col-span-1">
           <a href="#top" className="inline-flex items-center gap-2.5" onClick={(event) => goToSection(event, '#top')}>
             <LogoMark className="h-8 w-8 shrink-0" />
             <span className="font-display text-2xl font-extrabold uppercase">
               Iron<span className="text-ember">Peak</span>
             </span>
           </a>
-          <p className="mt-3 max-w-xs text-sm leading-relaxed text-mist">
+          <p className="mt-3 max-w-md text-sm leading-relaxed text-mist">
             Structured bulking workouts, nutrition targets, and recovery — built for people who want to add real
             muscle.
           </p>
         </div>
 
-        <div>
+        <div className="min-w-0">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Navigate</p>
-          <ul className="mt-4 flex flex-col gap-2">
+          <ul className="mt-4 flex flex-col gap-2 sm:flex-row sm:flex-wrap sm:gap-x-5 sm:gap-y-2 lg:flex-col">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
@@ -47,7 +47,7 @@ export default function Footer() {
           </ul>
         </div>
 
-        <div>
+        <div className="min-w-0">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">Social</p>
           <div className="mt-4 flex gap-3">
             {socials.map((item) => (

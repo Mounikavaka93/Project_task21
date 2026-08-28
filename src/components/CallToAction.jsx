@@ -11,12 +11,14 @@ export default function CallToAction() {
   }
 
   return (
-    <section id="join" className="scroll-mt-0 py-20 lg:scroll-mt-[-1.75rem] lg:py-28">
+    <section id="join" className="scroll-mt-0 py-14 sm:py-20 lg:scroll-mt-[-1.75rem] lg:py-28">
       <div className="section-shell">
-        <div className="flex w-full flex-col items-start justify-between gap-8 overflow-hidden rounded-3xl border border-ember/40 bg-gradient-to-br from-raised via-panel to-void px-6 py-12 sm:px-8 lg:flex-row lg:items-center">
-          <div className="w-full min-w-0">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-gold">Start the journey</p>
-            <h2 className="mt-3 font-display text-4xl font-extrabold uppercase leading-[0.95] sm:text-5xl lg:text-6xl">
+        <div className="flex w-full min-w-0 flex-col items-stretch justify-between gap-6 overflow-hidden rounded-2xl border border-ember/40 bg-gradient-to-br from-raised via-panel to-void px-5 py-8 sm:gap-8 sm:rounded-3xl sm:px-8 sm:py-12 lg:flex-row lg:items-center lg:px-12">
+          <div className="w-full min-w-0 lg:max-w-2xl">
+            <p className="text-[11px] font-semibold uppercase tracking-[0.2em] text-gold sm:text-xs sm:tracking-[0.28em]">
+              Start the journey
+            </p>
+            <h2 className="mt-3 font-display text-[clamp(1.85rem,6vw,3.75rem)] font-extrabold uppercase leading-[0.95]">
               Ready to bulk
               <span className="text-ember"> with a plan?</span>
             </h2>
@@ -27,11 +29,14 @@ export default function CallToAction() {
           </div>
 
           {joined ? (
-            <p className="w-full max-w-md rounded-2xl border border-line bg-void px-5 py-4 text-sm text-paper" role="status">
+            <p className="w-full rounded-2xl border border-line bg-void px-5 py-4 text-sm text-paper lg:max-w-md" role="status">
               You are on the list. Check your inbox for the starter week.
             </p>
           ) : (
-            <form onSubmit={handleSubmit} className="flex w-full max-w-md shrink-0 flex-col gap-3 sm:flex-row sm:items-center">
+            <form
+              onSubmit={handleSubmit}
+              className="flex w-full min-w-0 flex-col gap-3 sm:flex-row sm:items-center lg:max-w-md"
+            >
               <label className="sr-only" htmlFor="email">
                 Email
               </label>
@@ -46,7 +51,7 @@ export default function CallToAction() {
               />
               <button
                 type="submit"
-                className="h-12 shrink-0 rounded-full bg-ember px-6 text-sm font-semibold text-void transition-transform duration-200 hover:-translate-y-0.5 hover:bg-orange-400"
+                className="h-12 w-full shrink-0 rounded-full bg-ember px-6 text-sm font-semibold text-void transition-transform duration-200 hover:-translate-y-0.5 hover:bg-orange-400 sm:w-auto"
               >
                 Join now
               </button>

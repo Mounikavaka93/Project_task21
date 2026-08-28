@@ -15,6 +15,14 @@ export default function Navbar() {
   }, [])
 
   useEffect(() => {
+    const onResize = () => {
+      if (window.innerWidth >= 1024) setOpen(false)
+    }
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [])
+
+  useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : ''
     return () => {
       document.body.style.overflow = ''
@@ -33,21 +41,25 @@ export default function Navbar() {
         scrolled || open ? 'border-line bg-void/95 backdrop-blur-md' : 'border-transparent bg-void/70'
       }`}
     >
-      <nav className="section-shell grid h-16 grid-cols-[1fr_auto] items-center lg:h-[4.5rem] lg:grid-cols-[1fr_auto_1fr]">
-        <a href="#top" className="flex items-center gap-2.5 justify-self-start" onClick={(event) => goTo(event, '#top')}>
-          <LogoMark className="h-8 w-8 shrink-0" />
-          <span className="font-display text-2xl font-extrabold uppercase tracking-wide">
+      <nav className="section-shell grid h-14 grid-cols-[minmax(0,1fr)_auto] items-center sm:h-16 lg:h-[4.5rem] lg:grid-cols-[1fr_auto_1fr]">
+        <a
+          href="#top"
+          className="flex min-w-0 items-center gap-2 justify-self-start sm:gap-2.5"
+          onClick={(event) => goTo(event, '#top')}
+        >
+          <LogoMark className="h-7 w-7 shrink-0 sm:h-8 sm:w-8" />
+          <span className="truncate font-display text-xl font-extrabold uppercase tracking-wide sm:text-2xl">
             Iron<span className="text-ember">Peak</span>
           </span>
         </a>
 
-        <ul className="hidden items-center gap-7 lg:flex">
+        <ul className="hidden items-center gap-5 xl:gap-8 lg:flex">
           {navLinks.map((link) => (
             <li key={link.href}>
               <a
                 href={link.href}
                 onClick={(event) => goTo(event, link.href)}
-                className="text-sm font-medium text-mist transition-colors duration-200 hover:text-paper"
+                className="whitespace-nowrap text-sm font-medium text-mist transition-colors duration-200 hover:text-paper"
               >
                 {link.label}
               </a>
@@ -76,7 +88,7 @@ export default function Navbar() {
       </nav>
 
       <div
-        className={`fixed inset-x-0 top-16 z-40 border-b border-line bg-panel shadow-xl transition-all duration-300 lg:hidden ${
+        className={`fixed inset-x-0 top-14 z-40 max-h-[calc(100dvh-3.5rem)] overflow-y-auto border-b border-line bg-panel shadow-xl transition-all duration-300 sm:top-16 sm:max-h-[calc(100dvh-4rem)] lg:hidden ${
           open ? 'visible translate-y-0 opacity-100' : 'pointer-events-none invisible -translate-y-2 opacity-0'
         }`}
       >
